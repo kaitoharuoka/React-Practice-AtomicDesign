@@ -1,3 +1,4 @@
+import { BrowserRouter } from "react-router-dom";
 import { PrimaryButton } from "./components/atoms/button/PrimaryButton";
 import { SecondaryButton } from "./components/atoms/button/SeconaryButton";
 import { UserCard } from "./components/organisms/user/UserCard";
@@ -18,12 +19,14 @@ const user = {
 
 export default function App() {
   return (
-    <HeaderOnly>
-      <PrimaryButton>テスト</PrimaryButton>
-      <SecondaryButton>検索</SecondaryButton>
-      <br />
-      <SearchInput />
-      <UserCard user={user} />
-    </HeaderOnly>
+    <BrowserRouter>
+      <HeaderOnly>
+        <PrimaryButton>テスト</PrimaryButton>
+        <SecondaryButton>検索</SecondaryButton>
+        <br />
+        <SearchInput />
+        <UserCard user={user} />
+      </HeaderOnly>
+    </BrowserRouter>
   );
 }
